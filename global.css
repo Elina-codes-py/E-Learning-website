@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-midnight-blue: #23325A;
+    --color-dreamy-blue: #8197E5;
+
+    --color-primary: #232E3F;
+    --color-accent: #CF9421;
+    --color-cream: #EEECE3;
+    --color-gray: #DAD5C6;
+    --color-footer-background: #EEECE3;
+    /* --color-footer-background: #dad5c6; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    color: var(--color-accent);
+}

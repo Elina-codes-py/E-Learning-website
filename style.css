@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.page {
+    height: 100dvh;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: max-content 1fr auto;
+}
+
+/* For Navigation CSS */
+header {
+    display: grid;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navInner {
+    display: grid;
+    grid-template-columns: max-content auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navMenuLinks {
+    list-style-type: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content;
+    gap: 10px;
+    text-align: center;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+nav h1:hover {
+    cursor: pointer;
+    color: var(--color-accent);
+}
+
+ul li {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+ul li:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+}
+
+.menuIcon {
+    display: none;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.isVisible {
+    display: grid !important;
+}
+
+/* Hero Inner */
+.hero {
+    margin-bottom: 50px;
+}
+
+.heroInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.heroContents {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.heroInfo {
+    display: grid;
+    align-self: center;
+}
+
+.heroInfoTitle {
+    margin-bottom: 20px;
+    line-height: 1.12;
+}
+
+.heroImg {
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Courses */
+.courses {
+    margin-bottom: 50px;
+}
+
+.coursesInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.coursesContent {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.course {
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.course:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    scale: 1.02;
+}
+
+.courseImage {
+    height: 200px;
+    position: relative;
+}
+
+.courseImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.courseInfo {
+    padding: 10px 7px;
+}
+
+.courseInfo p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Footer Styling */
+footer {
+    background: var(--color-footer-background);
+}
+
+.footerInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+}
+
+.footerContent {
+    text-align: center;
+}
+
+/* For different screen sizes */
+@media(max-width: 768px) {
+
+    .navMenuLinks {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: white;
+        grid-auto-flow: row;
+
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .heroContents {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .coursesContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .coursesContent {
+        grid-template-columns: 1fr;
+    }
+}
